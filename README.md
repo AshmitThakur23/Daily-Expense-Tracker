@@ -2,7 +2,7 @@
 
 A clean, fast, and user-friendly way to log your daily expenses and instantly see where your money goes. Built with a sharp, responsive UI and simple flows so anyone—from students to busy professionals—can track spending in seconds.
 
-[Repo](https://github.com/AshmitThakur23/Daily-Expense-Tracker) • Default branch: `main`
+[Repository](https://github.com/AshmitThakur23/Daily-Expense-Tracker) • Default branch: `main`
 
 ![Made with Python](https://img.shields.io/badge/Python-18%25-3776AB?logo=python&logoColor=white)
 ![HTML](https://img.shields.io/badge/HTML-37.4%25-E34F26?logo=html5&logoColor=white)
@@ -22,27 +22,27 @@ A clean, fast, and user-friendly way to log your daily expenses and instantly se
 
 ## 👀 Screenshots (Front-end Preview)
 
-Place your three PNG screenshots inside a folder like `screenshots/` and ensure the paths below match your filenames.
+These images are linked directly from the repository root. Filenames contain spaces, so they’re URL-encoded to show properly on GitHub (spaces → `%20`). ✅
 
 <p align="center">
-  <img src="screenshots/overview.png" alt="Dashboard Overview" width="85%" />
+  <img src="./Screenshot%202025-10-23%20205312.png" alt="Dashboard Overview" width="85%" />
   <br/>
   <em>Overview — clean dashboard summarizing your spending.</em>
 </p>
 
 <p align="center">
-  <img src="screenshots/add-expense.png" alt="Add Expense Form" width="85%" />
+  <img src="./Screenshot%202025-10-23%20205321.png" alt="Add Expense Form" width="85%" />
   <br/>
   <em>Add Expense — quick form with category, amount, date, and notes.</em>
 </p>
 
 <p align="center">
-  <img src="screenshots/history.png" alt="Expense History and Filters" width="85%" />
+  <img src="./Screenshot%202025-10-23%20205325.png" alt="Expense History and Filters" width="85%" />
   <br/>
   <em>History — filterable, searchable list of previous expenses.</em>
 </p>
 
-Tip: Rename your images to meaningful names (e.g., `overview.png`, `add-expense.png`, `history.png`) so HR/reviewers understand what they’re seeing at a glance.
+Tip: For cleaner URLs later, consider renaming the images (e.g., `overview.png`, `add-expense.png`, `history.png`) or moving them to a `screenshots/` folder.
 
 ---
 
@@ -120,21 +120,18 @@ Choose the path that matches your setup.
 
 ## 🗂️ Suggested Project Structure
 
-Adjust to match your actual files:
-
 ```
 Daily-Expense-Tracker/
 ├─ index.html
-├─ styles/            # CSS files
-│  └─ style.css
-├─ scripts/           # JS (if any, for UI interactivity)
-│  └─ main.js
-├─ app.py             # Python backend (if present)
-├─ requirements.txt   # Python deps (if present)
-└─ screenshots/       # Add your 3 PNG images here
-   ├─ overview.png
-   ├─ add-expense.png
-   └─ history.png
+├─ static/             # CSS/JS/assets (if using Flask)
+├─ templates/          # HTML templates (if using Flask)
+├─ app.py              # Python backend (if present)
+├─ requirements.txt    # Python deps (if present)
+├─ expenses.json       # Sample data (if present)
+├─ README.md
+├─ Screenshot 2025-10-23 205312.png
+├─ Screenshot 2025-10-23 205321.png
+└─ Screenshot 2025-10-23 205325.png
 ```
 
 ---
@@ -197,8 +194,3 @@ Issues and PRs are welcome!
 If you like this project, please give it a ⭐ — it helps others discover it!
 
 ---
-
-Notes for maintainers:
-- Update the three screenshot paths to your actual PNG filenames.
-- Keep only the relevant Getting Started option (A or B) based on your repo’s setup.
-- If using a Python backend, ensure `requirements.txt` and the `app.py` run command match your framework (e.g., Flask/FastAPI).
