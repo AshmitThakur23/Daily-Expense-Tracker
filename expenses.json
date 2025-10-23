@@ -1,0 +1,44 @@
+[
+    {
+        "amount": 100.0,
+        "category": "pasta",
+        "date": "2025-04-23",
+        "note": ""
+    },
+    {
+        "amount": 200.0,
+        "category": "fruits",
+        "date": "2025-04-23",
+        "note": ""
+    },
+    {
+        "amount": 200.0,
+        "category": "fruits",
+        "date": "2025-04-23",
+        "note": ""
+    },
+    {
+        "amount": 100.0,
+        "category": "pasta",
+        "date": "2025-04-23",
+        "note": ""
+    },
+    {
+        "amount": 100.0,
+        "category": "maggi",
+        "date": "2025-04-29",
+        "note": "food"
+    },
+    {
+        "amount": 1000.0,
+        "category": "shopping",
+        "date": "2025-04-30",
+        "note": "..."
+    },
+    {
+        "amount": 100.0,
+        "category": "ice-cream",
+        "date": "2025-05-16",
+        "note": ""
+    }
+]

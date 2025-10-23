@@ -1,0 +1,183 @@
+/* 🌌 GLOBAL */
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+    background-attachment: fixed;
+    background-size: cover;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+  }
+  
+  html, body {
+    overflow-x: hidden;
+  }
+  
+  /* 📦 CONTAINER */
+  .container {
+    max-width: 800px;
+    margin: 30px auto;
+    background: rgba(255, 255, 255, 0.06);
+    padding: 35px;
+    border-radius: 20px;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.5);
+  }
+  
+  /* 📋 HEADINGS */
+  h1 {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 8px;
+  }
+  .tagline {
+    text-align: center;
+    margin-bottom: 25px;
+    font-size: 1rem;
+    color: #ccc;
+  }
+  
+  /* 💸 FORM */
+  .expense-form input,
+  .expense-form button {
+    padding: 10px;
+    margin: 8px 5px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+  }
+  .expense-form input {
+    width: 180px;
+  }
+  .expense-form button {
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  .expense-form button:hover {
+    background-color: #45a049;
+  }
+  
+  /* 📊 CHART */
+  canvas {
+    max-width: 100%;
+    margin: 20px auto;
+    display: block;
+  }
+  
+  /* 📋 TABLE */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: rgba(255, 255, 255, 0.05);
+  }
+  th, td {
+    padding: 10px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    text-align: center;
+  }
+  th {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+  
+  /* 🖼️ BANNERS */
+  .banner {
+    width: 100%;
+    max-height: 250px;
+    height: auto;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+    opacity: 0.97;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+  }
+  .bottom-banner-img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    object-position: top; /* 👈 This ensures the face (top of image) is visible */
+    display: block;
+    margin-top: 40px;
+    border-radius: 0;
+    box-shadow: 0 -10px 30px rgba(0, 0, 0, 0.5);
+  }
+  
+  .top-banner {
+    margin-bottom: 30px;
+  }
+  .bottom-banner {
+    margin-top: 30px;
+  }
+  
+  /* 💃 CORNER CHARACTER IMAGES (Jumping) */
+/* 💃 CORNER CHARACTER IMAGES (Jumping - Enlarged) */
+.corner-image {
+    position: fixed;
+    bottom: 0;
+    width: 300px; /* ⬅️ Increased size */
+    height: auto;
+    z-index: 10;
+    pointer-events: none;
+    user-select: none;
+    animation: jumpSlight 2.6s ease-in-out infinite;
+  }
+  
+  .corner-image.left {
+    left: 10px; /* Add slight padding from edge */
+  }
+  
+  .corner-image.right {
+    right: 10px;
+  }
+  
+  @keyframes jumpSlight {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-18px); /* Smooth visible jump */
+    }
+  }
+  /* 🖼️ Mini Wallpaper Row */
+.mini-wallpaper-row {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  gap: 12px;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.03);
+  margin-top: 40px;
+  border-radius: 12px;
+  box-shadow: inset 0 0 10px rgba(255,255,255,0.1);
+  scrollbar-width: thin;
+  scrollbar-color: #888 transparent;
+}
+
+.mini-wallpaper-row::-webkit-scrollbar {
+  height: 10px;
+}
+.mini-wallpaper-row::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 10px;
+}
+.mini-wallpaper-row::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.mini-wall {
+  height: 120px;
+  width: 90px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  flex-shrink: 0;
+  transition: transform 0.3s;
+}
+.mini-wall:hover {
+  transform: scale(1.08);
+}
+
+  
+  

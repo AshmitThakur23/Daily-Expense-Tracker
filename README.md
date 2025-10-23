@@ -36,3 +36,4 @@ Visit [Flask Quickstart](https://flask.palletsprojects.com/en/latest/quickstart/
 
 Happy coding! 🙂# Daily-spend-Tracker
 # Daily-spend-Tracker
+# Daily-Expense-Tracker

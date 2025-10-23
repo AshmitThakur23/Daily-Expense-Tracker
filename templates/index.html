@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SpendSmart – Daily Tracker</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+  <!-- 🖼️ Top Banner -->
+  <img src="{{ url_for('static', filename='left-character.jpg') }}" class="banner top-banner" alt="Top Banner">
+
+  <!-- 🎴 Corner Characters -->
+  <img src="{{ url_for('static', filename='left-character.jpg') }}" class="corner-image left" alt="Left Character">
+  <img src="{{ url_for('static', filename='right-character.jpg') }}" class="corner-image right" alt="Right Character">
+
+  <!-- 💼 Main Container -->
+  <div class="container">
+    <h1>💸 SpendSmart</h1>
+    <p class="tagline">Track your daily expenses smartly!</p>
+
+    <!-- 📥 Form -->
+    <form method="POST" class="expense-form">
+      <input type="number" step="0.01" name="amount" placeholder="Amount (₹)" required />
+      <input type="text" name="category" placeholder="Category (e.g. Food, Travel)" required />
+      <input type="date" name="date" value="{{ today }}" required />
+      <input type="text" name="note" placeholder="Note (optional)" />
+      <button type="submit">➕ Add Expense</button>
+    </form>
+
+    <!-- 📊 Summary -->
+    <h2>📊 Summary</h2>
+    <canvas id="expenseChart"></canvas>
+
+    <!-- 📋 Expense History -->
+    <h2>📋 Expense History</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Amount (₹)</th>
+          <th>Category</th>
+          <th>Date</th>
+          <th>Note</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for expense in expenses %}
+        <tr>
+          <td>{{ '%.2f'|format(expense.amount) }}</td>
+          <td>{{ expense.category }}</td>
+          <td>{{ expense.date }}</td>
+          <td>{{ expense.note }}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+
+  <!-- 🎯 Mini Wallpapers Row -->
+  <div class="mini-wallpaper-row">
+    {% for i in range(1, 17) %}
+      <img src="{{ url_for('static', filename='mini' ~ i ~ '.jpeg') }}" class="mini-wall" alt="Mini {{ i }}">
+    {% endfor %}
+  </div>
+
+  <!-- 📊 Chart Script -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const categories = {{ categories|tojson }};
+      const amounts    = {{ amounts|tojson }};
+
+      const ctx = document.getElementById('expenseChart').getContext('2d');
+      new Chart(ctx, {
+        type: 'pie',
+        data: {
+          labels: categories,
+          datasets: [{
+            label: 'Expenses by Category',
+            data: amounts,
+            backgroundColor: [
+              '#FF6384', '#36A2EB', '#FFCE56',
+              '#4BC0C0', '#9966FF', '#FF9F40'
+            ]
+          }]
+        },
+        options: {
+          responsive: true,
+          plugins: {
+            legend: { position: 'bottom' }
+          }
+        }
+      });
+    });
+  </script>
+</body>
+</html>
+
+
