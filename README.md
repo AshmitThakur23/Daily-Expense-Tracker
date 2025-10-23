@@ -22,8 +22,6 @@ A clean, fast, and user-friendly way to log your daily expenses and instantly se
 
 ## 👀 Screenshots (Front-end Preview)
 
-These images are linked directly from the repository root. Filenames contain spaces, so they’re URL-encoded to show properly on GitHub (spaces → `%20`). ✅
-
 <p align="center">
   <img src="./Screenshot%202025-10-23%20205312.png" alt="Dashboard Overview" width="85%" />
   <br/>
