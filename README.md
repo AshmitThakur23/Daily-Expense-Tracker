@@ -42,9 +42,6 @@ These images are linked directly from the repository root. Filenames contain spa
   <em>History — filterable, searchable list of previous expenses.</em>
 </p>
 
-Tip: For cleaner URLs later, consider renaming the images (e.g., `overview.png`, `add-expense.png`, `history.png`) or moving them to a `screenshots/` folder.
-
----
 
 ## 🧠 Problem & Solution
 
